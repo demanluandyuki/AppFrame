@@ -1,1 +1,4 @@
 include ':appframeproject'
+
+include ':ApiSdk'
+project(':ApiSdk').projectDir = new File(settingsDir, '../ApiSdk/ApiSdk')
