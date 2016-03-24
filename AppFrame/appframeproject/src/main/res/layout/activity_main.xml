@@ -10,7 +10,8 @@
     tools:context="com.joyfulmath.appframe.MainActivity">
 
     <TextView
+        android:id="@+id/tv_map"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:text="Start" />
 </RelativeLayout>
