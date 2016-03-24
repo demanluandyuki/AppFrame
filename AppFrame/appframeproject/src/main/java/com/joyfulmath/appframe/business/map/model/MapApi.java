@@ -1,6 +1,7 @@
 package com.joyfulmath.appframe.business.map.model;
 
 import com.joyfulmath.publiclibrary.base.ApiInit;
+import com.joyfulmath.publiclibrary.utils.TraceLog;
 
 import java.util.LinkedHashMap;
 
@@ -22,19 +23,21 @@ public class MapApi extends ApiInit{
 
         if (sInstance == null) {
             sInstance = new MapApi();
-                hostUrl = "http://api.map.baidu.com/";
+                hostUrl = "http://api.map.baidu.com";
         }
         return sInstance;
     }
 
-    public String getIpAddress(String ip)
+    public BaiduBean getIpAddress(String ip)
     {
-        String methodUrl = String.format("location/ip");
+        String methodUrl = String.format("/location/ip");
         LinkedHashMap<String,String> map = new LinkedHashMap<>();
         map.put("ip",ip);
         map.put("ak",Config.BAIDU_AK);
-        String sn = SnCal.getSn(map);
-        map.put("sn",sn);
-        return get(String.class,hostUrl,methodUrl,map,null);
+        map.put("coor","bd09ll");
+//        String sn = SnCal.getSn(map,methodUrl);
+//        TraceLog.i(sn);
+//        map.put("sn",sn);
+        return get(BaiduBean.class,hostUrl,methodUrl,map,null);
     }
 }

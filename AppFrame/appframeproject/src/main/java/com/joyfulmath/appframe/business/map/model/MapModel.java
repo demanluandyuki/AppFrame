@@ -1,5 +1,6 @@
 package com.joyfulmath.appframe.business.map.model;
 
+import com.joyfulmath.publiclibrary.json.JsonUtils;
 import com.joyfulmath.publiclibrary.utils.TraceLog;
 
 /**
@@ -8,10 +9,10 @@ import com.joyfulmath.publiclibrary.utils.TraceLog;
  */
 public class MapModel {
 
-    public String getAddress()
+    public BaiduBean getAddress()
     {
-        String address = MapApi.getInstance().getIpAddress("116.247.112.179");
-        TraceLog.i(address);
+        BaiduBean address = MapApi.getInstance().getIpAddress("116.247.112.179");
+        TraceLog.i(JsonUtils.toJSONString(address));
         return address;
     }
 }

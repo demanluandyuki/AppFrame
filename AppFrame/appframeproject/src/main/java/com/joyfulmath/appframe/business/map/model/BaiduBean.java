@@ -6,6 +6,13 @@ package com.joyfulmath.appframe.business.map.model;
  */
 public class BaiduBean {
 
+    public BaiduBean() {
+
+    }
+
+    public BaiduBean(String errorMessage) {
+    }
+
     /**
      * address : CN|吉林|长春|None|CERNET|1|None
      * content : {"address":"吉林省长春市","address_detail":{"city":"长春市","city_code":53,"district":"","province":"吉林省","street":"","street_number":""},"point":{"x":"125.31364243","y":"43.89833761"}}

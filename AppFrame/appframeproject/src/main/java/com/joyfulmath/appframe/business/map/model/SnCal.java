@@ -11,11 +11,11 @@ import java.util.Map;
  */
 public class SnCal {
 
-    public static String getSn(LinkedHashMap<String,String> params){
+    public static String getSn(LinkedHashMap<String,String> params,String methodUrl){
         String paramsStr = null;
         try {
             paramsStr = toQueryString(params);
-            String wholeStr = new String("/geocoder/v2/?" + paramsStr + "yoursk");
+            String wholeStr = new String(methodUrl+"?"+ paramsStr + "yoursk");
             String tempStr = URLEncoder.encode(wholeStr, "UTF-8");
             return MD5(tempStr);
         } catch (UnsupportedEncodingException e) {

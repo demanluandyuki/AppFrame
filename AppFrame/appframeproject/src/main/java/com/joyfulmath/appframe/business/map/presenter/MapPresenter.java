@@ -1,5 +1,6 @@
 package com.joyfulmath.appframe.business.map.presenter;
 
+import com.joyfulmath.appframe.business.map.model.BaiduBean;
 import com.joyfulmath.appframe.business.map.model.MapModel;
 
 /**
@@ -15,7 +16,7 @@ public class MapPresenter implements IMapPresenter{
     }
 
     @Override
-    public String load() {
+    public BaiduBean load() {
         return mapModel.getAddress();
     }
 }
