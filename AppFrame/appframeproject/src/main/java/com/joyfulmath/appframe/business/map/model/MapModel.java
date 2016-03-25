@@ -15,4 +15,11 @@ public class MapModel {
         TraceLog.i(JsonUtils.toJSONString(address));
         return address;
     }
+
+    public BaiduBean postAddress()
+    {
+        BaiduBean address = MapApi.getInstance().postIpAddress("116.247.112.179");
+        TraceLog.i(JsonUtils.toJSONString(address));
+        return address;
+    }
 }

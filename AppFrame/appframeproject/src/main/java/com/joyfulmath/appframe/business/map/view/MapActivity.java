@@ -1,7 +1,6 @@
 package com.joyfulmath.appframe.business.map.view;
 
 import android.app.Activity;
-import android.content.pm.PackageManager;
 import android.widget.TextView;
 
 import com.joyfulmath.appframe.R;
@@ -38,9 +37,21 @@ public class MapActivity extends Activity {
         loadBackground();
     }
 
+    @Click(R.id.btn_post)
+    void onPostClick()
+    {
+        postBackground();
+    }
+
     @Background
     void loadBackground()
     {
-        presenter.load();
+        presenter.getTestApi();
+    }
+
+    @Background
+    void postBackground()
+    {
+        presenter.postTestApi();
     }
 }

@@ -16,7 +16,12 @@ public class MapPresenter implements IMapPresenter{
     }
 
     @Override
-    public BaiduBean load() {
+    public BaiduBean getTestApi() {
         return mapModel.getAddress();
+    }
+
+    @Override
+    public BaiduBean postTestApi() {
+        return mapModel.postAddress();
     }
 }

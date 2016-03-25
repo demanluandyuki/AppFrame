@@ -1,8 +1,6 @@
 package com.joyfulmath.appframe.business.map.model;
 
 import com.joyfulmath.publiclibrary.base.ApiInit;
-import com.joyfulmath.publiclibrary.utils.TraceLog;
-
 import java.util.LinkedHashMap;
 
 /**
@@ -17,7 +15,7 @@ public class MapApi extends ApiInit{
     /**
      * 初次使用时调用此方法获取实例
      *
-     * @return
+     * @return  MapApi instance
      */
     public synchronized static MapApi getInstance() {
 
@@ -28,9 +26,14 @@ public class MapApi extends ApiInit{
         return sInstance;
     }
 
+    /**
+     * get address city
+     * @param ip    ipaddress
+     * @return      BaiduBean
+     */
     public BaiduBean getIpAddress(String ip)
     {
-        String methodUrl = String.format("/location/ip");
+        String methodUrl = "/location/ip";
         LinkedHashMap<String,String> map = new LinkedHashMap<>();
         map.put("ip",ip);
         map.put("ak",Config.BAIDU_AK);
@@ -39,5 +42,20 @@ public class MapApi extends ApiInit{
 //        TraceLog.i(sn);
 //        map.put("sn",sn);
         return get(BaiduBean.class,hostUrl,methodUrl,map,null);
+    }
+
+    /**
+     * get address city
+     * @param ip    ipaddress
+     * @return      BaiduBean
+     */
+    public BaiduBean postIpAddress(String ip)
+    {
+        String methodUrl = "/location/ip";
+        LinkedHashMap<String,String> map = new LinkedHashMap<>();
+        map.put("ip",ip);
+        map.put("ak",Config.BAIDU_AK);
+        map.put("coor","bd09ll");
+        return post(BaiduBean.class,hostUrl,methodUrl,map,null);
     }
 }

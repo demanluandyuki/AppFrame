@@ -7,5 +7,6 @@ import com.joyfulmath.appframe.business.map.model.BaiduBean;
  * @version on 2016-03-24 15:49
  */
 public interface IMapPresenter {
-    BaiduBean load();
+    BaiduBean getTestApi();
+    BaiduBean postTestApi();
 }
