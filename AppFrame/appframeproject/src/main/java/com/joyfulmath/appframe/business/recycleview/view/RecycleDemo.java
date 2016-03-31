@@ -12,6 +12,7 @@ import com.joyfulmath.appframe.R;
 import com.joyfulmath.appframe.business.recycleview.presenter.IRecyclePresenter;
 import com.joyfulmath.appframe.business.recycleview.presenter.RecycleAdapter;
 import com.joyfulmath.appframe.business.recycleview.presenter.RecyclePresenter;
+import com.joyfulmath.publiclibrary.utils.TraceLog;
 
 /**
  * Created by deman on 2016/3/30.
@@ -25,6 +26,7 @@ public class RecycleDemo extends Activity implements IRecycleView{
     @AfterViews
     void initViews()
     {
+        TraceLog.i();
         recyclePresenter = new RecyclePresenter();
         mRvDemo.setLayoutManager(new LinearLayoutManager(this));
         mRvDemo.setAdapter(new RecycleAdapter(this,recyclePresenter));
