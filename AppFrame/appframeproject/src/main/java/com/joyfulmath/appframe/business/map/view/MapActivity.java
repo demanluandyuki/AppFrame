@@ -6,7 +6,7 @@ import android.widget.TextView;
 import com.joyfulmath.appframe.R;
 import com.joyfulmath.appframe.business.map.presenter.IMapPresenter;
 import com.joyfulmath.appframe.business.map.presenter.MapPresenter;
-import com.joyfulmath.publiclibrary.utils.TraceLog;
+import com.joyfulmath.publicutils.utils.TraceLog;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Background;

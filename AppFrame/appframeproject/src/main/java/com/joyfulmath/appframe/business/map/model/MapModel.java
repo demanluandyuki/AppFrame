@@ -1,7 +1,7 @@
 package com.joyfulmath.appframe.business.map.model;
 
 import com.joyfulmath.publiclibrary.json.JsonUtils;
-import com.joyfulmath.publiclibrary.utils.TraceLog;
+import com.joyfulmath.publicutils.utils.TraceLog;
 
 /**
  * @author deman.lu

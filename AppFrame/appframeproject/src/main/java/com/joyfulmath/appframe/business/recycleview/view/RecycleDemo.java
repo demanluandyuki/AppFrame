@@ -12,7 +12,7 @@ import com.joyfulmath.appframe.R;
 import com.joyfulmath.appframe.business.recycleview.presenter.IRecyclePresenter;
 import com.joyfulmath.appframe.business.recycleview.presenter.RecycleAdapter;
 import com.joyfulmath.appframe.business.recycleview.presenter.RecyclePresenter;
-import com.joyfulmath.publiclibrary.utils.TraceLog;
+import com.joyfulmath.publicutils.utils.TraceLog;
 
 /**
  * Created by deman on 2016/3/30.
