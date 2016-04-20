@@ -1,5 +1,6 @@
 package com.joyfulmath.appframe.business.map.model;
 
+import com.joyfulmath.publiclibrary.base.ApiChannel;
 import com.joyfulmath.publiclibrary.base.ApiInit;
 import java.util.LinkedHashMap;
 
@@ -21,7 +22,7 @@ public class MapApi extends ApiInit{
 
         if (sInstance == null) {
             sInstance = new MapApi();
-                hostUrl = "http://api.map.baidu.com";
+                hostUrl = ApiChannel.HOST_URL;
         }
         return sInstance;
     }
