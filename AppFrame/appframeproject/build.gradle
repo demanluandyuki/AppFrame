@@ -1,6 +1,11 @@
 apply plugin: 'com.android.application'
 apply plugin: 'android-apt'
 def AAVersion = '3.3.2'
+def PRODUCT_NAME = "appframe"
+
+
+def BUILD_TIME_FORMAT = new Date().format("yyyyMMdd")
+
 
 android {
     compileSdkVersion 23
@@ -12,14 +17,45 @@ android {
         versionCode 1
         versionName "1.0"
     }
+
     buildTypes {
         release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
         }
     }
-    productFlavors {
+
+
+    productFlavors.all {flavor ->
+        flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
     }
+
+    productFlavors {
+        xiaomi {}
+        _360 {}
+        baidu {}
+        wandoujia {}
+    }
+
+    // 指定apk名
+    applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            def outputFile = output.outputFile
+            // 打包类型
+            def buildTypeName = variant.buildType.name
+            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                // 打包名称
+                def flavorName = variant.productFlavors[0].name
+                // 版本名称
+                def versionName = defaultConfig.versionName
+                // haofang_release_baidu_ver1.0.0_build20150721.apk
+                def fileName = "${PRODUCT_NAME}_${buildTypeName}_${flavorName}_ver${versionName}_build${BUILD_TIME_FORMAT}.apk"
+
+                output.outputFile = new File(outputFile.parent, fileName)
+            }
+        }
+    }
+
 }
 
 dependencies {
@@ -40,3 +76,6 @@ apt {
         resourcePackageName "com.joyfulmath.appframe"
     }
 }
+
+
+

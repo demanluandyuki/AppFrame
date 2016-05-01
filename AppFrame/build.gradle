@@ -2,9 +2,9 @@
 
 buildscript {
     repositories {
-        jcenter{
-            url "http://jcenter.bintray.com"
-        }
+        //内网maven库
+        maven {  url "http://maven.ipo.com/nexus/content/groups/public/"  }
+        jcenter()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:1.5.0'
@@ -18,9 +18,9 @@ buildscript {
 
 allprojects {
     repositories {
-        jcenter{
-            url "http://jcenter.bintray.com"
-        }
+        //内网maven库
+        maven {  url "http://maven.ipo.com/nexus/content/groups/public/"  }
+        jcenter()
     }
 }
 
