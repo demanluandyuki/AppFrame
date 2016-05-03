@@ -16,8 +16,8 @@ android {
         applicationId "com.joyfulmath.appframe"
         minSdkVersion 17
         targetSdkVersion 23
-        versionCode 20160503
-        versionName "2.5.3"
+        versionCode 20160001
+        versionName "1.0.1"
     }
 
     buildTypes {
@@ -35,10 +35,11 @@ android {
     }
 
     productFlavors {
-        xiaomi {}
-        _360 {}
-        baidu {}
-        wandoujia {}
+        dev{}
+//        xiaomi {}
+//        _360 {}
+//        baidu {}
+//        wandoujia {}
     }
 
     // 指定apk名
