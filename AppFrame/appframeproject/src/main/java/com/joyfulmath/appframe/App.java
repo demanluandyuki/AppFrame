@@ -17,6 +17,6 @@ public class App extends Application{
 
     private void initApp() {
         ImageLoadManger.getsInstance().initManager(this.getApplicationContext());
-        DevUtils.init();
+        DevUtils.init(getApplicationContext());
     }
 }

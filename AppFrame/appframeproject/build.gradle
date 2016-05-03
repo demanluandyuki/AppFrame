@@ -4,6 +4,8 @@ def AAVersion = '3.3.2'
 def PRODUCT_NAME = "appframe"
 
 
+def date = new Date()
+def BUILD_TIME = date.format("yyyy-MM-dd HH:mm:ss")
 def BUILD_TIME_FORMAT = new Date().format("yyyyMMdd")
 
 
@@ -14,14 +16,16 @@ android {
         applicationId "com.joyfulmath.appframe"
         minSdkVersion 17
         targetSdkVersion 23
-        versionCode 1
-        versionName "1.0"
+        versionCode 20160503
+        versionName "2.5.3"
     }
 
     buildTypes {
         release {
+            manifestPlaceholders = [GRADLE_BUILD_TIME : BUILD_TIME]
         }
         debug {
+            manifestPlaceholders = [GRADLE_BUILD_TIME : BUILD_TIME]
         }
     }
 

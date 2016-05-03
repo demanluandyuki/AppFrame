@@ -27,6 +27,7 @@ public class ApiBackDoorActivity extends Activity {
     void initViews()
     {
         mTvChannel.setText(mTvChannel.getText()+ DevUtils.getVersionName());
+        mTvBuildTime.setText(DevUtils.getVersionCode());
     }
 
 }
