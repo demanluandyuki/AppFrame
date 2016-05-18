@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../ApiSdk/ApiSdk/ApiSdk.iml" filepath="$PROJECT_DIR$/../ApiSdk/ApiSdk/ApiSdk.iml" />
       <module fileurl="file://$PROJECT_DIR$/AppFrame.iml" filepath="$PROJECT_DIR$/AppFrame.iml" />
+      <module fileurl="file://$PROJECT_DIR$/agiledesign/agiledesign.iml" filepath="$PROJECT_DIR$/agiledesign/agiledesign.iml" />
       <module fileurl="file://$PROJECT_DIR$/appframeproject/appframeproject.iml" filepath="$PROJECT_DIR$/appframeproject/appframeproject.iml" />
       <module fileurl="file://$PROJECT_DIR$/../ApiSdk/publicutils/publicutils.iml" filepath="$PROJECT_DIR$/../ApiSdk/publicutils/publicutils.iml" />
     </modules>
